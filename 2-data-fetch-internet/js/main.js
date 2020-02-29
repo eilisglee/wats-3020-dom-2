@@ -1,10 +1,10 @@
-function createPersonEl(title,firstname,lastname,email) {
+function createPersonEl(title, firstname, lastname, email) {
   let nameEl = document.createElement('li')
   nameEl.innerHTML = `${title} ${firstname} ${lastname} ${email}`
   return nameEl
 }
-//TODO add the URL to fetch data from the randomuser.me api
-fetch()
+//URL to fetch data from the randomuser.me api
+fetch('https://randomuser.me/api/?results=3')
   .then(function (response) {
     return response.json();
   })
